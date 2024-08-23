@@ -2,7 +2,7 @@ import React from "react";
 import Seo from "./Seo";
 
 const About = () => {
-  const arg = "About";
+  // const arg = "About";
 
   return (
     <div className="">

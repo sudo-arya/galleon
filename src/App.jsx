@@ -1,11 +1,11 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 
-import React, { useEffect } from "react";
+import React from "react";
 import {
   BrowserRouter as Router,
   Route,
   Routes,
-  useLocation,
+  // useLocation,
 } from "react-router-dom";
 import "./index.css";
 import Home from "./Components/Home";

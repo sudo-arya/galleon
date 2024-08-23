@@ -2,7 +2,7 @@ import React from "react";
 import Seo from "./Seo";
 
 const Footer = () => {
-  const arg = "Home";
+  // const arg = "Home";
 
   return (
     <div className="">

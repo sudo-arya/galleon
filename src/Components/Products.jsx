@@ -2,7 +2,7 @@ import React from "react";
 import Seo from "./Seo";
 
 const Products = () => {
-  const arg = "Products";
+  // const arg = "Products";
 
   return (
     <div className="">

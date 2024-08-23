@@ -2,7 +2,7 @@ import React from "react";
 import Seo from "./Seo";
 
 const Contact = () => {
-  const arg = "Contact";
+  // const arg = "Contact";
 
   return (
     <div className="">

@@ -3,7 +3,7 @@ import Seo from "./Seo";
 import "../index";
 
 const Home = () => {
-  const arg = "Home";
+  // const arg = "Home";
 
   return (
     <div className="">
