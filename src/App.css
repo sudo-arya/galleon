@@ -36,3 +36,30 @@
     transform: rotate(360deg);
   }
 }
+
+.cs-1 {
+    background-color: #5b2d12;
+}
+.cs-2 {
+    background-color: #ffffff;
+}
+.cs-3 {
+    background-color: #b25f16;
+}
+/* .cs-3 {
+    background-color: #fdfcdc;
+} */
+.cs-4 {
+    background-color: #00020d;
+}
+.cs-5 {
+    background-color: #0c2759;
+}
+.cs-6 {
+    background-color: #f07167;
+}
+
+
+
+
+
