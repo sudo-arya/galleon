@@ -22,8 +22,8 @@ const Navbar = () => {
 
   const getNavItemClass = (path) =>
     location.pathname === path
-      ? " text-cs1 cs-1 font-semibold bg-gray-90 py-2 px-3 rounded-lg cursor-pointer"
-      : "text-cs5 font-semibold cs-2 py-2 px-2 rounded-lg cursor-pointer hover:bg-cs4 hover:text-black ";
+      ? " text-white cs-1 font-semibold bg-cs6 py-2 px-3 rounded-xl cursor-pointer transform transition duration-500 ease-in-out"
+      : "text-cs5 font-semibold cs-6 py-2 px-2 rounded-xl cursor-pointer hover:bg-cs5 hover:text-white transform transition duration-500 ease-in-out ";
 
   return (
     <nav
