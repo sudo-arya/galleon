@@ -10,7 +10,11 @@ module.exports = {
         cs4: "#00020d",
         cs5: "#0c2759",
         cs6: "#339947",
-        cs7: "#CED4DA",
+        cs7: "#415A77",
+        facebook: "#465993",
+        yt: "#f51c0c",
+        x: "#000000",
+        linkedin: "#0077b3",
       },
       keyframes: {
         gradient: {

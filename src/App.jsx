@@ -11,6 +11,8 @@ import "./index.css";
 import Home from "./Components/Home";
 import About from "./Components/About";
 import Products from "./Components/Products";
+import Ethics from "./Components/Ethics";
+import Careers from "./Components/Careers";
 import Contact from "./Components/Contact";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
@@ -28,6 +30,8 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/products" element={<Products />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/ethics" element={<Ethics />} />
+            <Route path="/careers" element={<Careers />} />
           </Routes>
         </div>
         <Footer />
