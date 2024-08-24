@@ -22,8 +22,8 @@ const Navbar = () => {
 
   const getNavItemClass = (path) =>
     location.pathname === path
-      ? " text-white cs-1 font-semibold bg-cs6 py-2 px-3 rounded-xl cursor-pointer transform transition duration-500 ease-in-out"
-      : "text-cs5 font-semibold cs-6 py-2 px-2 rounded-xl cursor-pointer hover:bg-cs5 hover:text-white transform transition duration-500 ease-in-out ";
+      ? "text-cs6 font-bold py-2 px-3 cursor-pointer transform transition duration-250 ease-in-out"
+      : "text-cs5 font-semibold py-2 px-2 cursor-pointer transform transition duration-250 ease-in-out ";
 
   return (
     <nav
@@ -179,21 +179,102 @@ const Navbar = () => {
             </svg>
           </button>
         </div>
-        <div className="hidden md:flex md:space-x-6 text-lg">
-          <Link className={getNavItemClass("/")} to="/">
-            HOME
+        <div className="hidden md:flex md:space-x-1 text-lg">
+          
+          <Link
+            className="text-white my-auto w-20 h-10 whitespace-nowrap group relative overflow-y-hidden  md:flex hidden"
+            to="/"
+          >
+            <span
+              className={`${getNavItemClass(
+                "/"
+              )} absolute transform transition-transform duration-200 ease-in-out group-hover:-translate-y-10`}
+            >
+              HOME{" "}
+            </span>
+            <span
+              className={`${getNavItemClass(
+                "/"
+              )} absolute text-cs6 transform mt-3 group-hover:font-bold translate-y-full transition-transform duration-200 ease-in-out opacity-0 group-hover:opacity-100 group-hover:-translate-y-3`}
+            >
+              HOME{" "}
+            </span>
           </Link>
-          <Link className={getNavItemClass("/about")} to="/about">
-            WHO WE ARE
+          <Link
+            className="text-white my-auto w-36 h-10 whitespace-nowrap group relative overflow-y-hidden  md:flex hidden"
+            to="/about"
+          >
+            <span
+              className={`${getNavItemClass(
+                "/about"
+              )} absolute transform transition-transform duration-200 ease-in-out group-hover:-translate-y-10`}
+            >
+              WHO WE ARE
+            </span>
+            <span
+              className={`${getNavItemClass(
+                "/about"
+              )} absolute text-cs6 transform mt-3 group-hover:font-bold translate-y-full transition-transform duration-200 ease-in-out opacity-0 group-hover:opacity-100 group-hover:-translate-y-3`}
+            >
+              WHO WE ARE
+            </span>
           </Link>
-          <Link className={getNavItemClass("/products")} to="/products">
-            PRODUCTS
+          <Link
+            className="text-white my-auto w-32 h-10 whitespace-nowrap group relative overflow-y-hidden  md:flex hidden"
+            to="/products"
+          >
+            <span
+              className={`${getNavItemClass(
+                "/products"
+              )} absolute transform transition-transform duration-200 ease-in-out group-hover:-translate-y-10`}
+            >
+              PRODUCTS{" "}
+            </span>
+            <span
+              className={`${getNavItemClass(
+                "/products"
+              )} absolute text-cs6 transform mt-3 group-hover:font-bold translate-y-full transition-transform duration-200 ease-in-out opacity-0 group-hover:opacity-100 group-hover:-translate-y-3`}
+            >
+              PRODUCTS{" "}
+            </span>
           </Link>
-          <Link className={getNavItemClass("/ethics")} to="/ethics">
-            ETHICS & COMPLIANCE
+          <Link
+            className="text-white my-auto w-60 h-10 whitespace-nowrap group relative overflow-y-hidden  md:flex hidden"
+            to="/ethics"
+          >
+            <span
+              className={`${getNavItemClass(
+                "/ethics"
+              )} absolute transform transition-transform duration-200 ease-in-out group-hover:-translate-y-10`}
+            >
+              ETHICS & COMPLIANCE
+            </span>
+            <span
+              className={`${getNavItemClass(
+                "/ethics"
+              )} absolute text-cs6 transform mt-3 translate-y-full group-hover:font-bold transition-transform duration-200 ease-in-out opacity-0 group-hover:opacity-100 group-hover:-translate-y-3`}
+            >
+              ETHICS & COMPLIANCE
+            </span>
           </Link>
-          <Link className={getNavItemClass("/contact")} to="/contact">
-            CONTACT US
+          <Link
+            className="text-white my-auto w-36 h-10 whitespace-nowrap group relative overflow-y-hidden  md:flex hidden"
+            to="/contact"
+          >
+            <span
+              className={`${getNavItemClass(
+                "/contact"
+              )} absolute transform transition-transform duration-200 ease-in-out group-hover:-translate-y-10`}
+            >
+              CONTACT US
+            </span>
+            <span
+              className={`${getNavItemClass(
+                "/contact"
+              )} absolute text-cs6 transform mt-3 translate-y-full group-hover:font-bold transition-transform duration-200 ease-in-out opacity-0 group-hover:opacity-100 group-hover:-translate-y-3`}
+            >
+              CONTACT US
+            </span>
           </Link>
         </div>
       </div>
