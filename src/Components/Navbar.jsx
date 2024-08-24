@@ -30,7 +30,7 @@ const Navbar = () => {
       className={isSmallScreen ? "cs-2 p-2 pt-2 shadow-md" : "cs-2 shadow-md"}
     >
       <Seo title="Navbar - Galleon Trading" description="" keywords="" />
-      <div className=" rounded-2xl md:rounded-none md:flex md:space-x-12 space-x-f container bg-cs5 max-w-full justify-between items-center h-9">
+      <div className=" rounded-2xl md:rounded-none md:flex md:space-x-12 space-x-f container hidden md:visible bg-cs5 max-w-full justify-between items-center h-9">
         <div className=" md:flex md:space-x-12 text-lg text-white container mx-auto ">
           <Link
             className="text-white p-4 md:w-2/12 mx-10 md:mx-0 md:ml-0 h-10 pt-1 whitespace-nowrap group relative overflow-y-hidden  md:flex "

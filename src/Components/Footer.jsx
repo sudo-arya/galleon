@@ -167,7 +167,7 @@ const Footer = () => {
               target="_blank"
             >
               <p
-                className="text-white hover:text-facebook hover:bg-cs2 rounded-xl text-base font-medium cursor-pointer nav-item px-3 w-fit group transform transition-transform duration-500 ease-in-out"
+                className="text-white hover:text-facebook hover:bg-cs2 my-1 rounded-xl text-base font-medium cursor-pointer nav-item px-3 w-fit group transform transition-transform duration-500 ease-in-out"
                 style={{ display: "flex", alignItems: "center" }}
               >
                 <svg
@@ -191,7 +191,7 @@ const Footer = () => {
               target="_blank"
             >
               <p
-                className="text-white hover:text-yt hover:bg-cs2 rounded-xl text-base font-medium cursor-pointer nav-item px-3 w-fit group transform transition-transform duration-500 ease-in-out"
+                className="text-white hover:text-yt hover:bg-cs2 rounded-xl my-1 text-base font-medium cursor-pointer nav-item px-3 w-fit group transform transition-transform duration-500 ease-in-out"
                 style={{ display: "flex", alignItems: "center" }}
               >
                 <svg
@@ -215,7 +215,7 @@ const Footer = () => {
               target="_blank"
             >
               <p
-                className="text-white hover:text-x hover:bg-cs2 rounded-xl text-base font-medium cursor-pointer nav-item px-3 w-fit group transform transition-transform duration-500 ease-in-out"
+                className="text-white hover:text-x hover:bg-cs2 my-1 rounded-xl text-base font-medium cursor-pointer nav-item px-3 w-fit group transform transition-transform duration-500 ease-in-out"
                 style={{ display: "flex", alignItems: "center" }}
               >
                 <svg
@@ -239,7 +239,7 @@ const Footer = () => {
               target="_blank"
             >
               <p
-                className="text-white hover:text-linkedin hover:bg-cs2 rounded-xl text-base font-medium cursor-pointer nav-item px-3 w-fit group transform transition-transform duration-500 ease-in-out"
+                className="text-white hover:text-linkedin hover:bg-cs2 my-1 rounded-xl text-base font-medium cursor-pointer nav-item px-3 w-fit group transform transition-transform duration-500 ease-in-out"
                 style={{ display: "flex", alignItems: "center" }}
               >
                 <svg
@@ -259,10 +259,10 @@ const Footer = () => {
               </p>
             </Link>
           </div>
-          <div className=" flex flex-col w-fit mx-16 ">
+          <div className=" flex flex-col w-fit mx-16  ">
             <button onClick={`${handleAddressClick} `} id="address2">
               <p
-                className="text-white hover:text-cs6 hover:bg-cs2 rounded-xl text-base font-medium cursor-pointer nav-item px-3 w-fit group transform transition-transform duration-500 ease-in-out"
+                className="text-white hover:text-cs6 hover:bg-cs2 rounded-xl my-1 text-base font-medium cursor-pointer nav-item px-3 w-fit group transform transition-transform duration-500 ease-in-out"
                 style={{ display: "flex", alignItems: "center" }}
               >
                 <svg
@@ -288,7 +288,7 @@ const Footer = () => {
 
             <button id="call2" onClick={handlePhoneNumberClick}>
               <p
-                className="text-white hover:text-cs6 hover:bg-cs2 rounded-xl text-base font-medium cursor-pointer nav-item px-3 w-fit group transform transition-transform duration-500 ease-in-out"
+                className="text-white hover:text-cs6 hover:bg-cs2 my-1 rounded-xl text-base font-medium cursor-pointer nav-item px-3 w-fit group transform transition-transform duration-500 ease-in-out"
                 style={{ display: "flex", alignItems: "center" }}
               >
                 <svg
@@ -307,7 +307,7 @@ const Footer = () => {
 
             <button id="email2" onClick={handleEmailClick1}>
               <p
-                className="text-white hover:text-cs6 hover:bg-cs2 rounded-xl text-base font-medium cursor-pointer nav-item px-3 w-fit group transform transition-transform duration-500 ease-in-out"
+                className="text-white hover:text-cs6 hover:bg-cs2 rounded-xl my-1 text-base font-medium cursor-pointer nav-item px-3 w-fit group transform transition-transform duration-500 ease-in-out"
                 style={{ display: "flex", alignItems: "center" }}
               >
                 <svg
@@ -330,7 +330,7 @@ const Footer = () => {
             </button>
             <button id="email2" onClick={handleEmailClick2}>
               <p
-                className="text-white hover:text-cs6 hover:bg-cs2 rounded-xl text-base font-medium cursor-pointer nav-item px-3 w-fit group transform transition-transform duration-500 ease-in-out"
+                className="text-white hover:text-cs6 hover:bg-cs2 my-1 rounded-xl text-base font-medium cursor-pointer nav-item px-3 w-fit group transform transition-transform duration-500 ease-in-out"
                 style={{ display: "flex", alignItems: "center" }}
               >
                 <svg
