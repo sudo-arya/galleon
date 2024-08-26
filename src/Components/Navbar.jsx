@@ -184,16 +184,33 @@ const Navbar = () => {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="48"
-              height="48"
-              baseProfile="tiny"
-              version="1.2"
-              viewBox="0 0 24 24"
+              x="0px"
+              y="0px"
+              width="60"
               id="menu"
-              className="mr-3"
-              style={{ fill: "#339947", stroke: "#0c2759" }}
+              height="60"
+              viewBox="0 0 128 128"
+              className="mr-5"
+              // style={{ fill: "#339947", stroke: "#0c2759" }}
             >
-              <path d="M8 3H6a2.99 2.99 0 0 0-2.119.881A2.99 2.99 0 0 0 3 6v2c0 .825.337 1.575.881 2.119A2.99 2.99 0 0 0 6 11h2a2.99 2.99 0 0 0 2.119-.881A2.99 2.99 0 0 0 11 8V6a2.99 2.99 0 0 0-.881-2.119A2.99 2.99 0 0 0 8 3zm10 0h-2a2.99 2.99 0 0 0-2.119.881A2.99 2.99 0 0 0 13 6v2c0 .825.337 1.575.881 2.119A2.99 2.99 0 0 0 16 11h2a2.99 2.99 0 0 0 2.119-.881A2.99 2.99 0 0 0 21 8V6a2.99 2.99 0 0 0-.881-2.119A2.99 2.99 0 0 0 18 3zM8 13H6a2.99 2.99 0 0 0-2.119.881A2.99 2.99 0 0 0 3 16v2c0 .825.337 1.575.881 2.119A2.99 2.99 0 0 0 6 21h2a2.99 2.99 0 0 0 2.119-.881A2.99 2.99 0 0 0 11 18v-2a2.99 2.99 0 0 0-.881-2.119A2.99 2.99 0 0 0 8 13zm10 0h-2a2.99 2.99 0 0 0-2.119.881A2.99 2.99 0 0 0 13 16v2c0 .825.337 1.575.881 2.119A2.99 2.99 0 0 0 16 21h2a2.99 2.99 0 0 0 2.119-.881A2.99 2.99 0 0 0 21 18v-2a2.99 2.99 0 0 0-.881-2.119A2.99 2.99 0 0 0 18 13z"></path>
+              <path
+                fill="#fff"
+                d="M64 14A50 50 0 1 0 64 114A50 50 0 1 0 64 14Z"
+              ></path>
+              <path
+                fill="#0c2759"
+                d="M64,117c-29.2,0-53-23.8-53-53s23.8-53,53-53s53,23.8,53,53S93.2,117,64,117z M64,17c-25.9,0-47,21.1-47,47s21.1,47,47,47s47-21.1,47-47S89.9,17,64,17z"
+              ></path>
+              <path
+                fill="#0c2759"
+                d="M86.5 52h-45c-1.7 0-3-1.3-3-3s1.3-3 3-3h45c1.7 0 3 1.3 3 3S88.2 52 86.5 52zM86.5 67h-45c-1.7 0-3-1.3-3-3s1.3-3 3-3h45c1.7 0 3 1.3 3 3S88.2 67 86.5 67z"
+              ></path>
+              <g>
+                <path
+                  fill="#0c2759"
+                  d="M86.5,82h-45c-1.7,0-3-1.3-3-3s1.3-3,3-3h45c1.7,0,3,1.3,3,3S88.2,82,86.5,82z"
+                ></path>
+              </g>
             </svg>
           </button>
         </div>
@@ -300,17 +317,19 @@ const Navbar = () => {
           className="fixed inset-0 bg-black bg-opacity-25 z-20 transform transition duration-500 ease-in-out"
           onClick={() => setIsOpen(false)}
         >
-          <div className="fixed right-2 top-14 w-2/4 max-w-sm cs-1 bg-cs5 h-5/12 rounded-xl mt-3 z-30">
+          <div className="fixed right-2 top-4 w-2/4 max-w-sm cs-1 bg-cs5 h-5/12 rounded-xl mt-3 z-30">
             <div className="flex justify-end pl-4 pr-4 pt-4">
               <button
                 onClick={() => setIsOpen(false)}
                 className="text-white focus:outline-none"
               >
                 <svg
-                  className="w-8 h-8 cs-1 rounded-lg p-1"
+                  className="w-10 h-10 cs-1 rounded-lg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
+                  // width="60"
+                  // height="60"
                   style={{ fill: "#339947", stroke: "#339947" }}
                 >
                   <path
@@ -322,7 +341,7 @@ const Navbar = () => {
                 </svg>
               </button>
             </div>
-            <div className="flex flex-col space-y-2 pl-4 pr-4 mt-4 mb-4">
+            <div className="flex flex-col space-y-2 pl-4 pr-4 mt-2 mb-4">
               <Link className={getNavItemClass("/")} to="/">
                 Home
               </Link>
