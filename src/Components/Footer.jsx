@@ -69,7 +69,7 @@ const Footer = () => {
       <div>
         {isSmallScreen && (
           <div className="">
-            <div className="text-white flex-col flex items-center btn-back justify-center mb-2">
+            <div className="text-white flex-col flex items-center btn-back justify-center bg-cs2 mb-2 py-4">
               {/* <div className="bg-cs2 w-full p-5"></div> */}
               <button
                 className="md:w-48 pt-3 pb-3 bg-cs5 flex font-semibold items-center justify-between px-4 rounded-full allproduct  hover:bg-cs6 "
@@ -102,29 +102,30 @@ const Footer = () => {
             isSmallScreen ? "hidden" : "py-4"
           }  flex-row items-center justify-center sm:space-y-0 pt-5 hidden md:flex `}
         >
-          <div className="w-fit flex flex-col mx-20 ">
-            <div className="font-bold text-2xl text-cs2 mb-2 flex items-center justify-center">
-              About Us
+          <div className="w-fit flex flex-col  mx-10 mt-0 ">
+            <div className="font-bold text-2xl text-cs2 mb-2 flex items-center justify-center whitespace-nowrap">
+              {/* About Us */}
+               &nbsp;
             </div>
             <div className="flex items-center justify-center">
-              <hr className="h-2 w-80 border-cs7 pb-1" />
+              {/* <hr className="h-2 w-full  border-cs7 pb-1" /> */}
             </div>
           </div>
-          <div className="w-fit  flex flex-col mx-28">
+          <div className="w-fit  flex flex-col mx-60">
             <div className="font-bold text-2xl text-cs2 mb-2 flex items-center justify-center">
               Follow Us
             </div>
             <div className="flex items-center justify-center">
-              <hr className="h-2 w-80 border-cs7 pb-1" />
+              <hr className="h-2 w-full  border-cs7 pb-1" />
             </div>
           </div>
 
-          <div className="w-fit flex flex-col mx-20">
+          <div className="w-fit flex flex-col ">
             <div className="font-bold text-2xl text-cs2 mb-2  flex items-center justify-center">
               Contact Details
             </div>
             <div className=" flex items-center justify-center">
-              <hr className="h-2 w-80 border-cs7 pb-1" />
+              <hr className="h-2 w-full  border-cs7 pb-1" />
             </div>
           </div>
         </div>
@@ -132,21 +133,21 @@ const Footer = () => {
         <div
           className={`${
             isSmallScreen ? "hidden" : "flex"
-          }  hidden md:flex flex-row sm:space-y-0 justify-center `}
+          }  hidden md:flex flex-row sm:space-y-0 justify-center`}
         >
-          <div className="w-fit flex flex-col mx-20 mb-6">
+          <div className="w-fit flex flex-col md:mx-10 mb-6 -mt-16">
             <div className="flex  items-center justify-center">
               <img
                 src={gtlogoCircular}
                 width="160"
                 height="160"
                 alt="logo"
-                className="flex items-center justify-center py-2"
+                className="flex items-center justify-center"
               />
             </div>
             <div className="flex items-center justify-center content-center ml-4">
               <p
-                className="text-cs2 text-lg font-medium"
+                className="text-cs2 text-lg font-medium items-end"
                 style={{ display: "flex", alignItems: "center" }}
               >
                 <span className="mt-2 text-sm">
@@ -161,7 +162,7 @@ const Footer = () => {
               </p>
             </div>
           </div>
-          <div className="w-fit flex flex-col mx-40  ">
+          <div className="w-fit flex flex-col mx-20  ">
             <Link
               to="https://www.linkedin.com/in/deepanshuarya2024/"
               target="_blank"

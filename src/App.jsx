@@ -17,6 +17,7 @@ import Contact from "./Components/Contact";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import Seo from "./Components/Seo";
+import "./App.css"
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
       <div className="cs-5">
         <Navbar />
         <Seo title="Home - Galleon Trading" description="" keywords="" />
-        <div className="container mx-auto p-4 mt-0">
+        <div className="flex mx-auto mt-0">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
