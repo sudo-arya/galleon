@@ -25,7 +25,7 @@ function App() {
       <div className="cs-5">
         <Navbar />
         <Seo title="Home - Galleon Trading" description="" keywords="" />
-        <div className="flex mx-auto mt-0">
+        <div className="flex mx-auto mt-32">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />

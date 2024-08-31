@@ -8,6 +8,27 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const location = useLocation();
+   const [isVisible, setIsVisible] = useState(true); // State to manage visibility
+   const [lastScrollY, setLastScrollY] = useState(0); // State to track last scroll position
+
+   useEffect(() => {
+     const handleScroll = () => {
+       if (window.scrollY > lastScrollY) {
+         // If scrolling down
+         setIsVisible(false);
+       } else {
+         // If scrolling up
+         setIsVisible(true);
+       }
+       setLastScrollY(window.scrollY); // Update last scroll position
+     };
+
+     window.addEventListener("scroll", handleScroll); // Add scroll event listener
+
+     return () => {
+       window.removeEventListener("scroll", handleScroll); // Cleanup event listener on unmount
+     };
+   }, [lastScrollY]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -27,13 +48,22 @@ const Navbar = () => {
 
   return (
     <nav
-      className={isSmallScreen ? "cs-2 p-2 pt-2 shadow-md" : "cs-2 shadow-md"}
+      className={
+        isSmallScreen
+          ? "cs-2 shadow-md  fixed top-0 left-0 w-full z-50 mt-6"
+          : "cs-2 shadow-md fixed top-0 left-0 w-full z-50 "
+      }
     >
       <Seo title="Navbar - Galleon Trading" description="" keywords="" />
-      <div className=" rounded-2xl md:rounded-none md:flex md:space-x-12 space-x-f container hidden md:visible bg-cs5 max-w-full justify-between items-center h-9">
+      <div
+        className={`hidden md:visible md:rounded-none md:flex md:space-x-12 container bg-cs5 max-w-full justify-between items-center h-9 transition-transform duration-300 ${
+          isVisible ? "transform translate-y-0" : "transform -translate-y-full"
+        }`}
+      >
+        {" "}
         <div className=" md:flex md:space-x-12 text-lg text-white container mx-auto ">
           <Link
-            className="text-white p-4 md:w-2/12 mx-10 md:mx-0 md:ml-0 h-10 pt-1 whitespace-nowrap group relative overflow-y-hidden  md:flex "
+            className="text-white p-4 md:w-3/12 mx-10 md:mx-0 md:ml-0 h-10 pt-1 whitespace-nowrap group relative overflow-y-hidden  md:flex "
             to="/#location"
           >
             <span
@@ -48,7 +78,7 @@ const Navbar = () => {
             </span>
           </Link>
           <Link
-            className="text-white p-4 md:w-1/12 mx-28 md:mx-0 md:ml-0 h-10 pt-1 whitespace-nowrap group relative overflow-y-hidden  md:flex"
+            className="text-white p-4 md:w-2/12 mx-28 md:mx-0 md:ml-0 h-10 pt-1 whitespace-nowrap group relative overflow-y-hidden  md:flex"
             to="/careers"
           >
             <span
@@ -158,8 +188,15 @@ const Navbar = () => {
           <div className="w-20"></div>
         </div>
       </div>
-      <div className="container mx-auto flex justify-between items-center">
-        <div className="text-white font-bold cursor-pointer nav-item">
+      <div
+        className={`flex md:px-40 px-3 bg-cs2 justify-between items-center h-full transition-transform duration-300 ${
+          isVisible
+            ? "transform translate-y-0"
+            : "transform -translate-y-8 -mb-8"
+        }`}
+        // className="container mx-auto flex justify-between items-center bg-cs2  "
+      >
+        <div className="text-white font-bold cursor-pointer nav-item ">
           <Link to="/">
             <div className="flex flex-row items-center justify-center">
               <div>
@@ -177,7 +214,7 @@ const Navbar = () => {
             </div>
           </Link>
         </div>
-        <div className="md:hidden">
+        <div className="md:hidden ">
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="text-white rounded-xl focus:outline-none"
