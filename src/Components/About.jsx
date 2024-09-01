@@ -21,7 +21,7 @@ const About = () => {
           style={{ backgroundImage: `url(${farm1})` }}
         ></div>
         <div className="flex items-center justify-center w-full h-full md:mt-28">
-          <div className="relative h-fit flex flex-col justify-center  text-white z-10 bg-slate-200 mx-auto w-100 bg-opacity-80 px-10 py-4 mt-36 md:mt-0 pt-9 pb-9 rounded-xl">
+          <div className="relative h-fit flex flex-col justify-center  text-white z-10 bg-slate-200 md:mx-auto w-fit bg-opacity-80 md:px-10 px-8 mx-6 py-4 mt-36 md:mt-0 pt-9 pb-9 rounded-xl">
             <h1 className="text-5xl text-cs5 font-bold text-center">
               About Us
             </h1>
