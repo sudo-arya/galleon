@@ -354,14 +354,14 @@ const Navbar = () => {
           className="fixed inset-0 bg-black bg-opacity-25 z-20 transform transition duration-500 ease-in-out"
           onClick={() => setIsOpen(false)}
         >
-          <div className="fixed right-2 top-4 w-2/4 max-w-sm cs-1 bg-cs5 h-5/12 rounded-xl mt-3 z-30">
+          <div className="fixed right-2 top-4 w-2/4 max-w-sm bg-cs5 h-5/12 rounded-xl mt-3 z-30">
             <div className="flex justify-end pl-4 pr-4 pt-4">
               <button
                 onClick={() => setIsOpen(false)}
                 className="text-white focus:outline-none"
               >
                 <svg
-                  className="w-10 h-10 cs-1 rounded-lg"
+                  className="w-10 h-10 bg-cs5 rounded-lg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
