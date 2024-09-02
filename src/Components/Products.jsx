@@ -15,7 +15,7 @@ const Products = () => {
     <div className="w-screen bg-cs2">
       {/* Products */}
       <Seo title="Products - Galleon Trading" description="" keywords="" />
-      <div className="flex items-center justify-center text-5xl font-semibold mt-12">
+      <div className="flex items-center justify-center text-5xl font-semibold mt-12 text-cs5">
         Our offering
       </div>
       <div className=" flex items-center justify-center">
@@ -123,7 +123,7 @@ const Products = () => {
           </div>
         </div>
 
-        <div className="flex md:flex-row flex-col text-nowrap items-center justify-center w-full">
+        <div className="flex md:flex-row flex-col text-nowrap items-center justify-center md:mt-6 w-full">
           <div className="flex items-center justify-center flex-col font-semibold  w-1/6">
             <svg
               // fill="#000000"
