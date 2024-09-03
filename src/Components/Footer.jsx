@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import Seo from "./Seo";
-import gtlogoCircular from "../Assets/GT LOGO circular (1).png";
 
 
 
