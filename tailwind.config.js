@@ -3,6 +3,15 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        robotoMedium: [
+          '"Roboto Medium"',
+          "Georgia",
+          '"Times New Roman"',
+          "Times",
+          "serif",
+        ],
+      },
       colors: {
         cs1: "#5b2d12",
         cs2: "#ffffff",

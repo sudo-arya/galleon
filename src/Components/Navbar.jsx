@@ -63,11 +63,11 @@ const Navbar = () => {
         {" "}
         <div className=" md:flex md:space-x-12 text-lg text-white container mx-auto ">
           <Link
-            className="text-white p-4 md:w-3/12 mx-10 md:mx-0 md:ml-0 h-10 pt-1 whitespace-nowrap group relative overflow-y-hidden  md:flex "
+            className="text-white  xl:w-2/12 w-6/12 md:mx-0 md:ml-0 h-10 pt-1 whitespace-nowrap group relative overflow-y-hidden  md:flex "
             to="/#location"
           >
             <span
-              className={` absolute transform transition-transform duration-300 ease-in-out group-hover:-translate-y-10`}
+              className={` absolute transform transition-transform duration-300 ease-in-out group-hover:-translate-y-10 overscroll-x-none`}
             >
               Our Presence
             </span>
@@ -78,7 +78,7 @@ const Navbar = () => {
             </span>
           </Link>
           <Link
-            className="text-white p-4 md:w-2/12 mx-28 md:mx-0 md:ml-0 h-10 pt-1 whitespace-nowrap group relative overflow-y-hidden  md:flex"
+            className="text-white xl:w-1/12 w-4/12 md:mx-0 md:ml-0 h-10 pt-1 whitespace-nowrap group relative overflow-y-hidden  md:flex"
             to="/careers"
           >
             <span
@@ -98,7 +98,7 @@ const Navbar = () => {
             to="/products"
           ></Link>
           <Link
-            className="text-white my-auto w-1/12 h-10 whitespace-nowrap pt-1 group relative overflow-y-hidden md:flex hidden"
+            className="text-white my-auto xl:w-1/12 w-2/12 h-10 whitespace-nowrap pt-1 group relative overflow-y-hidden md:flex hidden"
             to="https://www.linkedin.com/in/deepanshuarya2024/"
             target="_blank"
           >
@@ -127,7 +127,7 @@ const Navbar = () => {
             </svg>
           </Link>
           <Link
-            className="text-white my-auto w-1/12 h-10 whitespace-nowrap pt-1 group relative overflow-y-hidden  md:flex hidden"
+            className="text-white my-auto xl:w-1/12 w-2/12 h-10 whitespace-nowrap pt-1 group relative overflow-y-hidden  md:flex hidden"
             to="https://www.linkedin.com/in/deepanshuarya2024/"
             target="_blank"
           >
@@ -157,7 +157,7 @@ const Navbar = () => {
             </svg>
           </Link>
           <Link
-            className="text-white my-auto w-1/12 h-10 whitespace-nowrap pt-1 group relative overflow-y-hidden  md:flex hidden"
+            className="text-white my-auto xl:w-1/12 w-2/12 h-10 whitespace-nowrap pt-1 group relative overflow-y-hidden  md:flex hidden"
             to="https://www.linkedin.com/in/deepanshuarya2024/"
             target="_blank"
           >
@@ -189,26 +189,20 @@ const Navbar = () => {
         </div>
       </div>
       <div
-        className={`flex md:px-40 px-3 bg-cs2 justify-between items-center h-full transition-transform duration-300 ${
+        className={`flex mx-auto  xl:px-40  px-3 bg-cs2 justify-between items-center h-full transition-transform duration-300 ${
           isVisible
             ? "transform translate-y-0"
             : "transform -translate-y-8 -mb-8"
         }`}
         // className="container mx-auto flex justify-between items-center bg-cs2  "
       >
-        <div className="text-white font-bold cursor-pointer nav-item ">
+        <div className="text-white font-bold cursor-pointer nav-item p-3">
           <Link to="/">
-            <div className="flex flex-row items-center justify-center">
-              <div>
-                <img
-                  src={gtlogoCircular}
-                  alt="logo"
-                  className={
-                    isSmallScreen ? "w-16 my-3 ml-2" : " w-20 my-2 ml-3"
-                  }
-                />
+            <div className="flex flex-row items-center justify-start">
+              <div className="w-full items-start">
+                <img src={gtlogoCircular} alt="logo" height="80" width="80" />
               </div>
-              <div className=" font-bold text-2xl md:text-4xl text-cs5 p-3 md:p-6">
+              <div className=" font-bold text-2xl md:text-4xl text-cs5 w-fit text-nowrap p-3">
                 Galleon Trading
               </div>
             </div>
@@ -252,7 +246,7 @@ const Navbar = () => {
           </button>
         </div>
         <div className="hidden md:flex md:space-x-1 text-lg">
-          <Link
+          {/* <Link
             className="text-white my-auto w-20 h-10 whitespace-nowrap group relative overflow-y-hidden  md:flex hidden"
             to="/"
           >
@@ -270,7 +264,7 @@ const Navbar = () => {
             >
               HOME{" "}
             </span>
-          </Link>
+          </Link> */}
           <Link
             className="text-white my-auto w-36 h-10 whitespace-nowrap group relative overflow-y-hidden  md:flex hidden"
             to="/about"
