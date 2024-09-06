@@ -17,6 +17,12 @@ import Contact from "./Components/Contact";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import Seo from "./Components/Seo";
+import Seasme from "./Components/Seasme";
+import Cotton from "./Components/Cotton";
+import CashewKernels from "./Components/CashewKernels";
+import CashewShell from "./Components/CashewShell";
+import Peanuts from "./Components/Peanuts";
+import Pulses from "./Components/Pulses";
 import "./App.css"
 
 function App() {
@@ -33,6 +39,12 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/ethics" element={<Ethics />} />
             <Route path="/careers" element={<Careers />} />
+            <Route path="/seasme" element={<Seasme />} />
+            <Route path="/pulses" element={<Pulses />} />
+            <Route path="/cashewShell" element={<CashewShell />} />
+            <Route path="/peanuts" element={<Peanuts />} />
+            <Route path="/cashewKernels" element={<CashewKernels />} />
+            <Route path="/cotton" element={<Cotton />} />
           </Routes>
         </div>
         <Footer />
