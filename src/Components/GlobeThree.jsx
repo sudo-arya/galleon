@@ -23,7 +23,7 @@ const GlobeThree = ({ locations }) => {
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true;
     controls.dampingFactor = 0.05;
-    controls.enableZoom = true;
+    controls.enableZoom = false;
     controls.enablePan = false;
     controls.rotateSpeed = 0.5;
 
@@ -80,8 +80,8 @@ const GlobeThree = ({ locations }) => {
         if (font) {
           const textGeometry = new TextGeometry(location.label, {
             font: font,
-            size: 0.3,
-            height: 0.1,
+            size: 0.2,
+            height: 0.01,
           });
           const textMaterial = new THREE.MeshBasicMaterial({
             color: location.color || "red",
@@ -94,6 +94,9 @@ const GlobeThree = ({ locations }) => {
 
           // Orient label to be flat on the globe's surface
           textMesh.lookAt(new THREE.Vector3(0, 0, 0));
+
+          // Flip the text mesh to correct mirroring
+          textMesh.rotateY(Math.PI);
           globeGroup.add(textMesh);
         }
       });
@@ -130,7 +133,7 @@ const GlobeThree = ({ locations }) => {
   }, [locations]);
 
   return (
-    <div
+    <div 
       ref={mountRef}
       className="xl:w-[50vw] xl:h-[50vh] w-[50vw] h-[38vh] mx-auto relative"
     />

@@ -1,10 +1,12 @@
-// src/GlobeThree.js
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import { FontLoader } from "three/examples/jsm/loaders/FontLoader";
+import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry";
 
-const GlobeThree = () => {
+const GlobeThree = ({ locations }) => {
   const mountRef = useRef(null);
+  const [font, setFont] = useState(null);
 
   useEffect(() => {
     const width = mountRef.current.clientWidth;
@@ -14,7 +16,6 @@ const GlobeThree = () => {
     const scene = new THREE.Scene();
     scene.background = null; // Set the scene background to transparent
     const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
-
     // Renderer setup with transparent background
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     renderer.setSize(width, height);
@@ -22,15 +23,14 @@ const GlobeThree = () => {
 
     // Add OrbitControls
     const controls = new OrbitControls(camera, renderer.domElement);
-    controls.enableDamping = true; // Enable damping (inertia)
+    controls.enableDamping = false;
     controls.dampingFactor = 0.05;
-    controls.enableZoom = true; // Allow zooming
-    controls.enablePan = false; // Disable panning
-    controls.rotateSpeed = 0.5; // Adjust rotation speed
+    controls.enableZoom = false;
+    controls.enablePan = false;
+    controls.rotateSpeed = 0.5;
 
     // Globe setup
-    const globeGroup = new THREE.Group(); // Create a group for the globe and markers
-
+    const globeGroup = new THREE.Group();
     const geometry = new THREE.SphereGeometry(5, 32, 32);
     const material = new THREE.MeshBasicMaterial({
       map: new THREE.TextureLoader().load(
@@ -38,7 +38,7 @@ const GlobeThree = () => {
       ),
     });
     const globe = new THREE.Mesh(geometry, material);
-    globeGroup.add(globe); // Add the globe to the group
+    globeGroup.add(globe);
 
     // Function to convert lat/lng to 3D coordinates
     const convertLatLngToVector3 = (lat, lng, radius) => {
@@ -52,39 +52,66 @@ const GlobeThree = () => {
       return new THREE.Vector3(x, y, z);
     };
 
-    // Add markers with different colors
-    const markers = [
-      { lat: -8.7832, lng: 34.5085, label: "Tanzania", color: "red" }, // Tanzania example
-      { lat: 6.5244, lng: 3.3792, label: "Nigeria", color: "blue" }, // Nigeria example
-      // Add more locations with specific colors
-    ];
+    // Load font and create text labels
+    const fontLoader = new FontLoader();
+    fontLoader.load(
+      "https://threejs.org/examples/fonts/helvetiker_regular.typeface.json",
+      (loadedFont) => {
+        setFont(loadedFont);
+        createMarkers(loadedFont);
+      }
+    );
 
-    markers.forEach((marker) => {
-      const markerGeometry = new THREE.SphereGeometry(0.1, 8, 8); // Small sphere for the marker
-      const markerMaterial = new THREE.MeshBasicMaterial({
-        color: marker.color,
-      }); // Unique color for each marker
-      const markerMesh = new THREE.Mesh(markerGeometry, markerMaterial);
+    const createMarkers = (font) => {
+      locations.forEach((location) => {
+        // Create marker
+        const markerGeometry = new THREE.SphereGeometry(0.1, 8, 8);
+        const markerMaterial = new THREE.MeshBasicMaterial({
+          color: location.color || "red",
+        });
+        const markerMesh = new THREE.Mesh(markerGeometry, markerMaterial);
+        const markerPosition = convertLatLngToVector3(
+          location.lat,
+          location.lng,
+          5.1
+        );
+        markerMesh.position.copy(markerPosition);
+        globeGroup.add(markerMesh);
 
-      // Position marker on the globe
-      const markerPosition = convertLatLngToVector3(
-        marker.lat,
-        marker.lng,
-        5.1
-      ); // Slightly above the globe surface
-      markerMesh.position.copy(markerPosition);
+        // Create label
+        if (font) {
+          const textGeometry = new TextGeometry(location.label, {
+            font: font,
+            size: 0.2,
+            height: 0.01,
+          });
+          const textMaterial = new THREE.MeshBasicMaterial({
+            color: location.color || "red",
+          });
+          const textMesh = new THREE.Mesh(textGeometry, textMaterial);
 
-      globeGroup.add(markerMesh); // Add marker to the globe group
-    });
+          // Position label on globe
+          textMesh.position.copy(markerPosition);
+          textMesh.position.y += 0.2; // Adjust label position slightly above the marker
 
-    scene.add(globeGroup); // Add the entire group to the scene
-    camera.position.z = 10;
+          // Orient label to be flat on the globe's surface
+          textMesh.lookAt(new THREE.Vector3(0, 0, 0));
+
+          // Flip the text mesh to correct mirroring
+          textMesh.rotateY(Math.PI);
+          globeGroup.add(textMesh);
+        }
+      });
+
+      scene.add(globeGroup);
+      camera.position.z = 10;
+    };
 
     // Animation loop
     const animate = () => {
       requestAnimationFrame(animate);
-      controls.update(); // Update controls
-      globeGroup.rotation.y += 0.004; // Rotate the entire group slowly for auto-rotation effect
+      controls.update();
+      globeGroup.rotation.y += 0.004;
       renderer.render(scene, camera);
     };
     animate();
@@ -105,7 +132,7 @@ const GlobeThree = () => {
       window.removeEventListener("resize", handleResize);
       mountRef.current.removeChild(renderer.domElement);
     };
-  }, []);
+  }, [locations]);
 
   return (
     <div
