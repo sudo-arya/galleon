@@ -1,6 +1,6 @@
 import React from "react";
 import Seo from "./Seo";
-import GlobeCesium from "./GlobeCesium"
+// import GlobeCesium from "./GlobeCesium"
 
 const Seasme = () => {
   // const arg = "Seasme";
@@ -9,7 +9,7 @@ const Seasme = () => {
     <div className="">
       Seasme
       <Seo title="Seasme - Galleon Trading" description="" keywords="" />
-      <GlobeCesium />
+      {/* <GlobeCesium /> */}
     </div>
   );
 };
