@@ -140,6 +140,7 @@ const GlobeThree = ({ locations }) => {
     return () => {
       window.removeEventListener("resize", handleResize);
       if (mountRef.current) {
+        // eslint-disable-next-line
         mountRef.current.removeChild(renderer.domElement);
       }
     };

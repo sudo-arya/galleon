@@ -8,7 +8,6 @@ const GlobeThree = ({ locations }) => {
   const mountRef = useRef(null);
   // eslint-disable-next-line
   const [font, setFont] = useState(null);
-
   useEffect(() => {
     const width = mountRef.current.clientWidth;
     const height = mountRef.current.clientHeight;
@@ -130,6 +129,7 @@ const GlobeThree = ({ locations }) => {
     return () => {
       window.removeEventListener("resize", handleResize);
       if (mountRef.current) {
+        // eslint-disable-next-line
         mountRef.current.removeChild(renderer.domElement);
       }
     };
