@@ -77,4 +77,36 @@
     width: 88rem;
 }
 
+#call1:hover{
+  stroke: #FFFFFF; /* Change this color to your desired hover color*/
+    fill: #FFFFFF;
 
+}
+#call1 {
+  stroke: #0D1B2A; /* Change this color to your desired hover color*/
+    fill: #0D1B2A; /* Change this color to your desired hover color*/
+    --transition-duration: 300ms;
+  transition: transform var(--transition-duration) ease-in-out, background-color var(--transition-duration) ease-in-out, color var(--transition-duration) ease-in-out;
+}
+#email1:hover{
+  stroke: #FFFFFF; /* Change this color to your desired hover color*/
+    fill: #FFFFFF;
+
+}
+#email1 {
+  stroke: #0D1B2A; /* Change this color to your desired hover color*/
+    fill: #0D1B2A; /* Change this color to your desired hover color*/
+    --transition-duration: 300ms;
+  transition: transform var(--transition-duration) ease-in-out, background-color var(--transition-duration) ease-in-out, color var(--transition-duration) ease-in-out;
+}
+#address1:hover{
+  stroke: #FFFFFF; /* Change this color to your desired hover color*/
+    fill: #FFFFFF;
+
+}
+#address1 {
+  stroke: #0D1B2A; /* Change this color to your desired hover color*/
+    fill: #0D1B2A; /* Change this color to your desired hover color*/
+    --transition-duration: 300ms;
+  transition: transform var(--transition-duration) ease-in-out, background-color var(--transition-duration) ease-in-out, color var(--transition-duration) ease-in-out;
+}
