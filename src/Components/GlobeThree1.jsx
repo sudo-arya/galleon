@@ -6,6 +6,7 @@ import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry";
 
 const GlobeThree = ({ locations }) => {
   const mountRef = useRef(null);
+  // eslint-disable-next-line
   const [font, setFont] = useState(null);
 
   useEffect(() => {

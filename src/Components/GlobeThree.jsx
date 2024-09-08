@@ -6,6 +6,7 @@ import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry";
 
 const GlobeThree = ({ locations }) => {
   const mountRef = useRef(null);
+  // eslint-disable-next-line
   const [font, setFont] = useState(null);
 
   useEffect(() => {
@@ -135,7 +136,7 @@ const GlobeThree = ({ locations }) => {
   }, [locations]);
 
   return (
-    <div 
+    <div
       ref={mountRef}
       className="xl:w-[50vw] xl:h-[50vh] w-[50vw] h-[38vh] mx-auto relative"
     />
