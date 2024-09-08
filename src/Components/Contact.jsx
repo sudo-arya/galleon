@@ -6,9 +6,8 @@ import Map from "./Map";
 
 const Contact = () => {
   // const arg = "Contact";
+  // eslint-disable-next-line
   const [isSmallScreen, setIsSmallScreen] = useState(false);
-
-
 
   const handlePhoneNumberClick = () => {
     const phoneNumber = "+971 542969703"; // Replace this with your actual phone number
