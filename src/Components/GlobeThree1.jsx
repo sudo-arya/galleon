@@ -16,6 +16,7 @@ const GlobeThree = ({ locations }) => {
     const scene = new THREE.Scene();
     scene.background = null; // Set the scene background to transparent
     const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+
     // Renderer setup with transparent background
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     renderer.setSize(width, height);
@@ -25,7 +26,7 @@ const GlobeThree = ({ locations }) => {
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.enableDamping = false;
     controls.dampingFactor = 0.05;
-    controls.enableZoom = false;
+    controls.enableZoom = true;
     controls.enablePan = false;
     controls.rotateSpeed = 0.5;
 
@@ -51,6 +52,14 @@ const GlobeThree = ({ locations }) => {
 
       return new THREE.Vector3(x, y, z);
     };
+
+    // Calculate the camera's initial position for Dubai
+    const dubaiLat = 25.276987;
+    const dubaiLng = 55.296249;
+    const dubaiPosition = convertLatLngToVector3(dubaiLat, dubaiLng, 10);
+
+    camera.position.copy(dubaiPosition);
+    camera.lookAt(new THREE.Vector3(0, 0, 0)); // Ensure the camera looks at the center of the globe
 
     // Load font and create text labels
     const fontLoader = new FontLoader();
@@ -82,7 +91,7 @@ const GlobeThree = ({ locations }) => {
         if (font) {
           const textGeometry = new TextGeometry(location.label, {
             font: font,
-            size: 0.2,
+            size: 0.1,
             height: 0.01,
           });
           const textMaterial = new THREE.MeshBasicMaterial({
@@ -104,7 +113,6 @@ const GlobeThree = ({ locations }) => {
       });
 
       scene.add(globeGroup);
-      camera.position.z = 10;
     };
 
     // Animation loop
@@ -130,14 +138,16 @@ const GlobeThree = ({ locations }) => {
     // Cleanup on unmount
     return () => {
       window.removeEventListener("resize", handleResize);
-      mountRef.current.removeChild(renderer.domElement);
+      if (mountRef.current) {
+        mountRef.current.removeChild(renderer.domElement);
+      }
     };
   }, [locations]);
 
   return (
     <div
       ref={mountRef}
-      className="xl:w-[50vw] xl:h-[50vh] w-[100vw] h-[38vh] mx-auto relative"
+      className="xl:w-[33vw] xl:h-[50vh] w-[100vw] h-[38vh] mx-auto relative"
     />
   );
 };
