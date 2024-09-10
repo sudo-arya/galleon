@@ -134,3 +134,62 @@
     background-position: 0% 50%;
   }
 }
+
+@keyframes zoom-in {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes zoom-out {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+}
+
+.animate-zoom-in {
+  animation: zoom-in 0.7s forwards;
+}
+
+.animate-zoom-out {
+  animation: zoom-out 0.7s forwards;
+}
+@keyframes flip-in {
+  from {
+    transform: rotateY(90deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes flip-out {
+  from {
+    transform: rotateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: rotateY(-90deg);
+    opacity: 0;
+  }
+}
+
+.animate-flip-in {
+  animation: flip-in 0.7s forwards;
+}
+
+.animate-flip-out {
+  animation: flip-out 0.7s forwards;
+}

@@ -62,6 +62,7 @@ const ProductCarousel = () => {
   const [isAnimating, setIsAnimating] = useState(false);
 
   const handleProductClick = (index) => {
+    if (index === currentIndex) return; // No animation if the same product is clicked
     setIsAnimating(true);
     setTimeout(() => {
       setCurrentIndex(index);
@@ -70,15 +71,15 @@ const ProductCarousel = () => {
   };
 
   return (
-    <div className="flex flex-row items-center justify-center h-fit bg-gray-100 overflow-y-hidden overflow-hidden">
-      {/* Left Side Image with Animation */}
+    <div className="flex flex-row items-center justify-center h-fit bg-gray-100">
+      {/* Left Side Image with Zoom Out/In Animation */}
       <div
-        className={`relative flex items-center justify-center w-full h-[70vh] overflow-hidden shadow-xl transition-all duration-500 transform ${
+        className={`relative flex items-center justify-center w-full h-[70vh] overflow-hidden shadow-xl transition-transform duration-700 ${
           products[currentIndex].color
         } ${
           isAnimating
-            ? "-translate-x-full opacity-0"
-            : "translate-x-0 opacity-100"
+            ? "animate-zoom-out opacity-0"
+            : "animate-zoom-in opacity-100"
         }`}
       >
         <img
@@ -89,7 +90,7 @@ const ProductCarousel = () => {
       </div>
 
       {/* Product Selection Buttons */}
-      <div className="mt-6 w-fit flex flex-col space-y-4 ">
+      <div className="mt-6 w-fit flex flex-col space-y-4">
         {products.map((product, index) => (
           <button
             key={index}
@@ -101,14 +102,14 @@ const ProductCarousel = () => {
         ))}
       </div>
 
-      {/* Right Side Content with Animation */}
+      {/* Right Side Content with Zoom Out/In Animation */}
       <div
-        className={`relative flex flex-col items-center justify-center w-full h-[70vh] overflow-hidden shadow-xl transition-all duration-500 transform  ${
+        className={`relative flex flex-col items-center justify-center w-full h-[70vh] overflow-hidden shadow-xl transition-transform duration-700 ${
           products[currentIndex].textColor
         } ${
           isAnimating
-            ? "translate-x-full opacity-0"
-            : "translate-x-0 opacity-100"
+            ? "animate-zoom-out opacity-0"
+            : "animate-zoom-in opacity-100"
         }`}
       >
         <h2 className="text-5xl font-bold transition-transform duration-700 transform scale-100">
