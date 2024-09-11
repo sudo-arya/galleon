@@ -28,7 +28,7 @@ import "./App.css"
 function App() {
   return (
     <Router>
-      <div className="cs-5">
+      <div className="cs-">
         <Navbar />
         <Seo title="Home - Galleon Trading" description="" keywords="" />
         <div className="flex mx-auto mt-32">

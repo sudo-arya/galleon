@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 import Seo from "./Seo";
 
@@ -14,6 +15,9 @@ const Footer = () => {
     navigate(`/${path}`);
     setIsOpen(false); // Close the navbar on item click for smaller screens
   };
+const location = useLocation();
+const isHomePage = location.pathname === "/";
+const iscontactPage = location.pathname === "/contact";
 
   useEffect(() => {
     const handleResize = () => {
@@ -63,15 +67,24 @@ const Footer = () => {
   };
 
   return (
-    <div>
+    <div className="">
       <Seo title="Home - Galleon Trading" description="" keywords="" />
-      <div>
+      <div className="">
         {isSmallScreen && (
           <div className="">
-            <div className="text-white flex-col flex items-center btn-back justify-center bg-cs2 mb-2 py-4">
+            <div
+              className={`text-white flex-col flex items-center btn-back justify-center mb-2 py-4 ${
+                isHomePage ? "bg-sky-600 bg-opacity-20" : ""
+              }
+              
+              ${iscontactPage ? "bg-gray-200" : ""}
+              
+              `}
+            >
+              {" "}
               {/* <div className="bg-cs2 w-full p-5"></div> */}
               <button
-                className="md:w-48 pt-3 pb-3 bg-cs5 flex font-semibold items-center justify-between px-4 rounded-full allproduct  hover:bg-cs6 "
+                className="md:w-48 pt-3 pb-3 bg-cs5 flex font-semibold items-center justify-between px-4  rounded-full allproduct  hover:bg-cs6 "
                 onClick={() => handleNavItemClick("contact")}
               >
                 <div className="flex items-center justify-between w-full">

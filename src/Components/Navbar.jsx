@@ -386,7 +386,7 @@ const Navbar = () => {
               <Link className={getNavItemClass("/ethics")} to="/ethics">
                 ETHICS & COMPLIANCE
               </Link>
-              <Link className={getNavItemClass("/careers")} to="/ethics">
+              <Link className={getNavItemClass("/careers")} to="/careers">
                 CAREERS
               </Link>
               <Link className={getNavItemClass("/contact")} to="/contact">

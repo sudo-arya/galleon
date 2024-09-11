@@ -11,14 +11,18 @@ const Home = () => {
       {/* Home */}
       <Seo title="Home - Galleon Trading" description="" keywords="" />
       <div className="h-fit bg-sky-600 bg-opacity-20 flex items-start justify-center flex-col pb-10 xl:p-20 p-14 w-full">
-        <span className="x:text-8xl text-7xl text-gray-500 font-bold -ml-6"> Our Produce</span>
+        <span className="x:text-8xl text-7xl text-cs5 font-bold -ml-6">
+          {" "}
+          Our Produce
+        </span>
         <div className="xl:flex-row flex-col flex items-start justify-start pt-6">
           <div className="h-fit w-fit text-3xl font-semibold px-6 py-4 animated-gradient rounded-2xl m-2 text-white">
             Global
             <br /> Reach
           </div>
           <div className="h-fit w-fit text-3xl font-semibold px-6 py-4 animated-gradient rounded-2xl m-2 text-white">
-            Quality<br/> Assurance
+            Quality
+            <br /> Assurance
           </div>
           <div className="h-fit w-fit text-3xl font-semibold px-6 py-4 animated-gradient rounded-2xl m-2 text-white">
             Strong <br />
@@ -73,7 +77,7 @@ const Home = () => {
               </g>
             </svg>
           </div>
-          <div className="flex-row justify-center flex h-full pt-2">
+          <div className="flex-row justify-center flex h-full pt-2 ">
             <svg
               height="100"
               viewBox="0 0 134.586 134.553"
@@ -101,7 +105,47 @@ const Home = () => {
         </div>
       </div>
       <div>
-        <ProductCarousel/>
+        <ProductCarousel />
+      </div>
+      <div className="h-fit bg-sky-600 bg-opacity-20 flex items-center justify-center flex-col  pb-10 xl:p-20 p-8 w-full text-cs5">
+        <div className="flex items-center justify-center flex-col xl:flex-row">
+          <div className="rounded-full w-80 h-80 border-2 p-10 border-cs5 items-center justify-center flex flex-col text-7xl ">
+            <span className="text-2xl">Since</span>2018
+          </div>
+          <div className="rounded-full w-80 h-80 border-2 p-10 border-cs5 items-center justify-center flex flex-col text-5xl font-semibold xl:my-0 my-8 xl:mx-8 text-center ">
+            <span className="font-normal text-2xl mb-2">Source from a</span>
+            Global
+            <br />
+            Network<span className="font-normal text-2xl mt-2">of Farmers</span>
+          </div>
+          <div className="rounded-full w-80 h-80 border-2 p-10 border-cs5 items-center justify-center flex flex-col text-7xl font-semibold text-center ">
+            <span className="font-normal text-2xl mb-2">Operating in</span>17+
+            <span className="font-normal text-2xl mt-2">Countries</span>
+          </div>
+        </div>
+        <p className="my-10 ">
+          We are a leading food and agri-business, supplying food ingredients,
+          feed and fibre to 22,000 customers worldwide, ranging from
+          multi-national organisations with world famous brands to small family
+          run businesses.
+        </p>
+
+        <a href="/contact">
+          <button className="p-3 px-4 bg-cs6 text-white xl:flex hover:bg-cs5 transform transition ease-in-out delay-50 hidden ">
+            Contact US Today{" "}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              style={{ fill: "white" }}
+              viewBox="0 0 32 32"
+              id="arrow"
+              className="ml-2"
+            >
+              <path d="M4 15a1 1 0 0 0 1 1h19.586l-4.292 4.292a1 1 0 0 0 1.414 1.414l6-6a.99.99 0 0 0 .292-.702V15c0-.13-.026-.26-.078-.382a.99.99 0 0 0-.216-.324l-6-6a1 1 0 0 0-1.414 1.414L24.586 14H5a1 1 0 0 0-1 1z"></path>
+            </svg>
+          </button>
+        </a>
       </div>
     </div>
   );
