@@ -48,10 +48,10 @@ const Contact = () => {
       <Seo title="Contact - Galleon Trading" description="" keywords="" />
       <div className=" flex-col flex items-center justify-center xl:p-20 xl:px-60">
         <div className="bg-gray-200 p-6 w-full flex flex-col xl:flex-row items-center justify-center xl:pb-14 h-fit">
-          <div className="bg-gray-200 h-fit xl:w-2/3 w-full xl:p-6 pb-1  ">
-            <span className="font-semibold text-4xl">
+          <div className="bg-gray-200 h-fit xl:w-2/3 w-full xl:p-6 pb-1 mt-20 xl:mt-0 xl:text-left text-center ">
+            <span className="font-semibold text-4xl ">
               Galleon Trading LLC FZ
-              <hr className="h-2 xl:w-2/4 w-full border-cs4 pb-8 mt-1 " />
+              <hr className="h-2  xl:w-5/6 w-2/4 xl:mx-0 mx-auto border-cs4 pb-8 mt-1 " />
             </span>
 
             <div className="xl:flex-row flex-col flex items-center justify-center h-fit xl:pl-20">
@@ -162,9 +162,9 @@ const Contact = () => {
                   >
                     <div
                       id="address1"
-                      className="max-w-full p-4 sm:max-w-sm rounded-xl overflow-hidden shadow-md bg-white hover:bg-cs5 text-cs5 hover:text-white service transition duration-300 ease-in-out"
+                      className="max-w-full p-4 pb-5 sm:max-w-sm rounded-xl  overflow-hidden shadow-md bg-white hover:bg-cs5 text-cs5 hover:text-white service transition duration-300 ease-in-out"
                     >
-                      <p className="text-center font-semibold text-xl ">
+                      <p className="text-center font-semibold text-xl whitespace-nowrap ">
                         Corporate Office
                       </p>
                       <div className="flex items-center justify-center">
@@ -186,10 +186,11 @@ const Contact = () => {
                           <path d="M46.00001 52h-5c-1.64996 0-3 1.34998-3 3s1.35004 3 3 3h5c3.95312-.10883 3.95502-5.89099 0-6zM31.4336 43.82324c.34106.23438.79175.23438 1.13281 0 .6709-.46191 16.43359-11.45117 16.43359-24.82324 0-9.37402-7.62598-17-17-17S15.00001 9.62598 15.00001 19c0 13.37207 15.7627 24.36133 16.43359 24.82324zm.56641-39.82324c8.271 0 15 6.72852 15 15 0 10.95898-12.20068 20.67871-15 22.76367-2.79932-2.08496-15-11.80469-15-22.76367 0-8.27148 6.729-15 15-15z"></path>
                           <path d="M42.00001,19c0-5.51416-4.48584-10-10-10-13.26636,.54907-13.26251,19.45288,.00006,20,5.5141,0,9.99994-4.48584,9.99994-10Z"></path>
                         </svg>
-                        <span className="text-left ">
+                        <span className="text-left overflow-hidden overflow-y-hidden whitespace-nowrap">
                           <u>
-                            Business Center 1, M Floor,, The Meydan Hotel, Nad
-                            Al Sheba, Dubai, Dubai
+                            Business Center 1, M<br /> Floor, The Meydan Hotel,
+                            <br />
+                            Nad Al Sheba, Dubai
                           </u>
                         </span>
                       </p>

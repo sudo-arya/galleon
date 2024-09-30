@@ -63,13 +63,13 @@ const Navbar = () => {
         {" "}
         <div className=" md:flex md:space-x-12 text-lg text-white container mx-auto ">
           <Link
-            className="text-white  xl:w-2/12 w-6/12 md:mx-0 md:ml-0 h-10 pt-1 whitespace-nowrap group relative overflow-y-hidden  md:flex "
+            className="text-white  xl:w-3/12 w-6/12 md:mx-0 md:ml-0 h-10 pt-1 whitespace-nowrap group relative overflow-y-hidden  md:flex "
             to="/#location"
           >
             <span
               className={` absolute transform transition-transform duration-300 ease-in-out group-hover:-translate-y-10 overscroll-x-none`}
             >
-              Our Presence
+              Our Presence &nbsp;
             </span>
             <span
               className={`absolute text-cs6 transform mt-3 group-hover:font-bold translate-y-full transition-transform duration-300 ease-in-out opacity-0 group-hover:opacity-100 group-hover:-translate-y-3`}
@@ -78,7 +78,7 @@ const Navbar = () => {
             </span>
           </Link>
           <Link
-            className="text-white xl:w-1/12 w-4/12 md:mx-0 md:ml-0 h-10 pt-1 whitespace-nowrap group relative overflow-y-hidden  md:flex"
+            className="text-white xl:w-2/12 w-4/12 md:mx-0 md:ml-0 h-10 pt-1 whitespace-nowrap group relative overflow-y-hidden  md:flex"
             to="/careers"
           >
             <span

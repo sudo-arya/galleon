@@ -1,11 +1,11 @@
 // import logo from './logo.svg';
 
-import React from "react";
+import React, { useEffect } from "react";
 import {
   BrowserRouter as Router,
   Route,
   Routes,
-  // useLocation,
+  useLocation,
 } from "react-router-dom";
 import "./index.css";
 import Home from "./Components/Home";
@@ -26,11 +26,22 @@ import Pulses from "./Components/Pulses";
 import "./App.css"
 
 function App() {
+
+  function ScrollToTop() {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [pathname]);
+
+    return null;
+  }
   return (
     <Router>
       <div className="cs-">
         <Navbar />
         <Seo title="Home - Galleon Trading" description="" keywords="" />
+        <ScrollToTop />
         <div className="flex mx-auto mt-32">
           <Routes>
             <Route path="/" element={<Home />} />
