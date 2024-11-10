@@ -92,7 +92,7 @@ const GlobeThree = ({ locations }) => {
         if (font) {
           const textGeometry = new TextGeometry(location.label, {
             font: font,
-            size: 0.1,
+            size: 0.15,
             height: 0.01,
           });
           const textMaterial = new THREE.MeshBasicMaterial({

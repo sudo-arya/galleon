@@ -68,13 +68,19 @@
     height: 30rem;
 }
 .h-101 {
-    height: 80rem;
+    height: 32rem;
 }
 .w-100 {
     width: 45rem;
 }
 .w-101 {
     width: 88rem;
+}
+.w-103 {
+    width: 15%;
+}
+.w-104 {
+    width: 10%;
 }
 
 #call1:hover{

@@ -61,9 +61,9 @@ const Navbar = () => {
         }`}
       >
         {" "}
-        <div className=" md:flex md:space-x-12 text-lg text-white container mx-auto ">
+        <div className=" md:flex md:space-x-0 text-lg text-white container mx-auto ">
           <Link
-            className="text-white  xl:w-3/12 w-6/12 md:mx-0 md:ml-0 h-10 pt-1 whitespace-nowrap group relative overflow-y-hidden  md:flex "
+            className="text-white xl:w-2/12 w-103 md:mx-0 md:ml-0 h-10 pt-1 whitespace-nowrap group relative overflow-y-hidden  md:flex pr-32  "
             to="/#location"
           >
             <span
@@ -78,7 +78,7 @@ const Navbar = () => {
             </span>
           </Link>
           <Link
-            className="text-white xl:w-2/12 w-4/12 md:mx-0 md:ml-0 h-10 pt-1 whitespace-nowrap group relative overflow-y-hidden  md:flex"
+            className="text-white xl:w-2/12 w-103 md:mx-0 md:ml-0 h-10 pt-1 whitespace-nowrap group relative overflow-y-hidden  md:flex"
             to="/careers"
           >
             <span
@@ -372,7 +372,7 @@ const Navbar = () => {
                 </svg>
               </button>
             </div>
-            <div className="flex flex-col space-y-2 pl-4 pr-4 mt-2 mb-4">
+            <div className="flex flex-col space-y-2 pl-3 pr-3 mt-2 mb-4">
               <Link className={getNavItemClass("/")} to="/">
                 Home
               </Link>

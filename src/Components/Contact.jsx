@@ -49,14 +49,14 @@ const Contact = () => {
       <div className=" flex-col flex items-center justify-center xl:p-20 xl:px-60">
         <div className="bg-gray-200 p-6 w-full flex flex-col xl:flex-row items-center justify-center xl:pb-14 h-fit">
           <div className="bg-gray-200 h-fit xl:w-2/3 w-full xl:p-6 pb-1 mt-20 xl:mt-0 xl:text-left text-center ">
-            <span className="font-semibold text-4xl ">
+            <span className="font-semibold text-4xl xl:ml-20 ">
               Galleon Trading LLC FZ
-              <hr className="h-2  xl:w-5/6 w-2/4 xl:mx-0 mx-auto border-cs4 pb-8 mt-1 " />
+              <hr className="h-2  xl:w-4/6 w-2/4 ml-20 border-cs4 xl:pb-8 mt-1" />
             </span>
 
-            <div className="xl:flex-row flex-col flex items-center justify-center h-fit xl:pl-20">
-              <div className="flex md:flex-col flex-col items-center justify-center mt-2 h-fit">
-                <div className="mb-3 md:flex-row flex-col flex items-center justify-center ">
+            <div className="xl:flex-row flex-col flex  xl:items-start xl:justify-start items-center justify-center h-fit xl:pl-20">
+              <div className="flex md:flex-col flex-col xl:items-start xl:justify-start items-center justify-center mt-2 h-fit">
+                <div className="mb-3 md:flex-row flex-col flex items-start justify-start  ">
                   <button
                     onClick={handlePhoneNumberClick}
                     className="flex-grow m-2"
@@ -122,7 +122,7 @@ const Contact = () => {
                     </div>
                   </button>
                 </div>
-                <div className="mb-3 md:flex-row flex flex-col items-center justify-center">
+                <div className="mb-3 md:flex-row flex flex-col items-cente justify-cente items-start justify-start md:items-center md:justify-center">
                   <button onClick={handleEmailClick2} className="flex-grow m-2">
                     <div
                       id="email1"
