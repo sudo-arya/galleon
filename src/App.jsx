@@ -19,10 +19,12 @@ import Footer from "./Components/Footer";
 import Seo from "./Components/Seo";
 import Seasme from "./Components/Seasme";
 import Cotton from "./Components/Cotton";
+import Rice from "./Components/Rice";
 import CashewKernels from "./Components/CashewKernels";
 import CashewShell from "./Components/CashewShell";
 import Peanuts from "./Components/Peanuts";
 import Pulses from "./Components/Pulses";
+import Presence from "./Components/OurPresence";
 import "./App.css"
 
 function App() {
@@ -56,6 +58,8 @@ function App() {
             <Route path="/peanuts" element={<Peanuts />} />
             <Route path="/cashewKernels" element={<CashewKernels />} />
             <Route path="/cotton" element={<Cotton />} />
+            <Route path="/rice" element={<Rice />} />
+            <Route path="/presence" element={<Presence />} />
           </Routes>
         </div>
         <Footer />

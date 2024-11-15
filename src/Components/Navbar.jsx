@@ -69,7 +69,7 @@ const Navbar = () => {
         <div className=" md:flex md:space-x-0 text-lg text-white container mx-auto ">
           <Link
             className="text-white xl:w-2/12 w-103 md:mx-0 md:ml-0 h-10 pt-1 whitespace-nowrap group relative overflow-y-hidden  md:flex pr-32  "
-            to="/#location"
+            to="/presence"
           >
             <span
               className={` absolute transform transition-transform duration-300 ease-in-out group-hover:-translate-y-10 overscroll-x-none`}
@@ -202,9 +202,9 @@ const Navbar = () => {
         // className="container mx-auto flex justify-between items-center bg-cs2  "
       >
         <div
-          className={`text-white font-bold cursor-pointer nav-item p-3 ${
-        scaled ? '-ml-16' : ''
-      }`}
+          className={`text-white font-bold cursor-pointer nav-item p-3 md:flex md:space-x-0 container mx-auto ${
+            scaled ? "-ml-20" : ""
+          }`}
         >
           {/* xl:-ml-16 */}
           <Link to="/">
@@ -213,7 +213,7 @@ const Navbar = () => {
                 <img src={gtlogoCircular} alt="logo" height="80" width="80" />
               </div>
               <div className=" font-bold text-2xl md:text-4xl text-cs5 w-fit text-nowrap p-3">
-                Galleon Trading
+                GALLEON TRADING
               </div>
             </div>
           </Link>

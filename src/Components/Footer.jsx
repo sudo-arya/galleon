@@ -4,8 +4,6 @@ import { useLocation } from "react-router-dom";
 
 import Seo from "./Seo";
 
-
-
 const Footer = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   // eslint-disable-next-line no-unused-vars
@@ -15,9 +13,9 @@ const Footer = () => {
     navigate(`/${path}`);
     setIsOpen(false); // Close the navbar on item click for smaller screens
   };
-const location = useLocation();
-const isHomePage = location.pathname === "/";
-const iscontactPage = location.pathname === "/contact";
+  const location = useLocation();
+  const isHomePage = location.pathname === "/" ||"/presence";
+  const iscontactPage = location.pathname === "/contact";
 
   useEffect(() => {
     const handleResize = () => {
@@ -337,8 +335,9 @@ const iscontactPage = location.pathname === "/contact";
 
                     <span className="text-left p-2">
                       <u>
-                        Business Center 1, M Floor,, The Meydan Hotel, <br />
-                        Nad Al Sheba, Dubai, Dubai
+                        The Meydan Hotel, Grandstand, 6th floor, Meydan
+                        <br />
+                        Road, Nad Al Sheba, Dubai, U.A.E
                       </u>
                     </span>
                   </p>

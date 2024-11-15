@@ -188,9 +188,10 @@ const Contact = () => {
                         </svg>
                         <span className="text-left overflow-hidden overflow-y-hidden whitespace-nowrap">
                           <u>
-                            Business Center 1, M<br /> Floor, The Meydan Hotel,
-                            <br />
-                            Nad Al Sheba, Dubai
+                            
+                            The Meydan Hotel, Grandstand,
+                            <br /> 6th floor, Meydan Road, <br />
+                            Nad Al Sheba, Dubai, U.A.E
                           </u>
                         </span>
                       </p>

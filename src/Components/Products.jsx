@@ -6,6 +6,7 @@ import cashewImage from "../Assets/cashew.jpg";
 import seasmeImage from "../Assets/seasme.jpg";
 import peanutImage from "../Assets/peanut1.jpg";
 import cottonImage from "../Assets/cotton.jpg";
+import riceImage from "../Assets/rice.jpg";
 import pulsesImage from "../Assets/pulses.jpg";
 
 const Products = () => {
@@ -251,24 +252,22 @@ const Products = () => {
               </a>
             </div>
             <div className="w-full">
-              <a href="/ethics">
-                <div className="relative w-full overflow-hidden h-[49vh] transform transition delay-150 ease-in-out group">
-                  <div className="relative w-full h-full bg-cs6 text-white">
+              <a href="/rice">
+                <div className="relative w-full overflow-hidden h-[49vh]  transform transition delay-150 ease-in-out group">
+                  <div className="relative w-full h-full">
                     <div className="absolute inset-0 bg-black opacity-55 group-hover:opacity-40 z-10"></div>
 
-                    {/* <img
-                    src={pulsesImage}
-                    className="w-full h-full object-cover object-right"
-                    alt=""
-                  /> */}
+                    <img
+                      src={riceImage}
+                      className="w-full h-full object-cover object-right"
+                      alt=""
+                    />
                     <p className="absolute inset-0 w-full h-full text-5xl flex items-start justify-start p-6 font-bold flex-col text-white z-20">
-                      Ethics & Complaince
+                      Rice
                       <span className=" text-base py-3 md:py-8 font-semibold">
-                        We are committed to upholding the highest standards of
-                        ethics and compliance, ensuring transparency and
-                        integrity in all our operations. Our practices are
-                        aligned with global norms to foster trust and
-                        accountability across our value chain.
+                        Rice is sourced from India and Vietnam, celebrated for
+                        its premium quality, rich aroma, and versatility as a
+                        staple food grain.
                       </span>
                       <svg
                         height="512"
