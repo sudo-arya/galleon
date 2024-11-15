@@ -94,7 +94,7 @@ const Careers = () => {
             If you are interested in joining our dynamic team, please send your
             resume and a cover letter to{" "}
             <span className="bg-cs6 bg-opacity-15">
-              &nbsp;careers@galleon-trading.com &nbsp;
+              &nbsp; mail@galleon-trading.com &nbsp;
             </span>{" "}
             Include the position you are applying for in the subject line.
           </p>

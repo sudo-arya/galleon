@@ -110,7 +110,7 @@ const Home = () => {
       <div className="h-fit bg-sky-600 bg-opacity-20 flex items-center justify-center flex-col  pb-10 xl:p-20 p-8 w-full text-cs5">
         <div className="flex items-center justify-center flex-col xl:flex-row">
           <div className="rounded-full w-80 h-80 border-2 p-10 border-cs5 items-center justify-center flex flex-col text-7xl ">
-            <span className="text-2xl">Since</span>2018
+            <span className="text-2xl">Since</span>2023
           </div>
           <div className="rounded-full w-80 h-80 border-2 p-10 border-cs5 items-center justify-center flex flex-col text-5xl font-semibold xl:my-0 my-8 xl:mx-8 text-center ">
             <span className="font-normal text-2xl mb-2">Source from a</span>
@@ -132,7 +132,7 @@ const Home = () => {
 
         <a href="/contact">
           <button className="p-3 px-4 bg-cs6 text-white xl:flex hover:bg-cs5 transform transition ease-in-out delay-50 hidden ">
-            Contact US Today{" "}
+            Contact us{" "}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"

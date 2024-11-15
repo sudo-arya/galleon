@@ -7,6 +7,7 @@ import gtlogoCircular from "../Assets/GT LOGO circular.png"
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const [scaled, setScaled] = useState(false);
   const location = useLocation();
    const [isVisible, setIsVisible] = useState(true); // State to manage visibility
    const [lastScrollY, setLastScrollY] = useState(0); // State to track last scroll position
@@ -32,11 +33,15 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleResize = () => {
+      // Detect screen width for small screen
       setIsSmallScreen(window.innerWidth <= 768);
+
+      // Detect screen scaling (e.g., 125% or more scaling)
+      setScaled(window.devicePixelRatio > 1);
     };
 
     window.addEventListener("resize", handleResize);
-    handleResize();
+    handleResize(); // Run on initial render
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -196,7 +201,12 @@ const Navbar = () => {
         }`}
         // className="container mx-auto flex justify-between items-center bg-cs2  "
       >
-        <div className="text-white font-bold cursor-pointer nav-item p-3">
+        <div
+          className={`text-white font-bold cursor-pointer nav-item p-3 ${
+        scaled ? '-ml-16' : ''
+      }`}
+        >
+          {/* xl:-ml-16 */}
           <Link to="/">
             <div className="flex flex-row items-center justify-start">
               <div className="w-full items-start">
@@ -266,7 +276,7 @@ const Navbar = () => {
             </span>
           </Link> */}
           <Link
-            className="text-white my-auto w-36 h-10 whitespace-nowrap group relative overflow-y-hidden  md:flex hidden"
+            className="text-white my-auto w-40 h-10 whitespace-nowrap group relative overflow-y-hidden  md:flex hidden"
             to="/about"
           >
             <span
