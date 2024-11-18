@@ -3,6 +3,9 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import iconUrl from "../Assets/marker-icon.png";
 
+// Import the GeoJSON data (replace with your actual file path)
+import geoData from "./custom.geo.json"; // Adjust the path as necessary
+
 const Map = () => {
   const mapRef = useRef(null);
 
@@ -20,6 +23,7 @@ const Map = () => {
     { lat: 20.5937, lng: 78.9629, label: "India", color: "green" },
     { lat: 14.0583, lng: 108.2772, label: "Vietnam", color: "green" },
   ];
+
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     // Define custom icons
@@ -36,10 +40,21 @@ const Map = () => {
         [8.444619629465514, 62.45748126777431],
         3
       ); // Centered on Ghana
-// 8.444619629465514, 62.45748126777431;
+
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(
         mapRef.current
       );
+
+      // Add GeoJSON data for countries
+      L.geoJSON(geoData.features, {
+        style: {
+          fillColor: "green",
+          weight: 1,
+          opacity: 0.6,
+          color: "green",
+          fillOpacity: 0.5,
+        },
+      }).addTo(mapRef.current);
 
       // Add markers for all sources
       sources.forEach((source) => {
