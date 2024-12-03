@@ -29,15 +29,15 @@ const Products = () => {
                   className="absolute inset-0 w-full h-full object-cover object-right"
                   alt=""
                 />
-                <p className="absolute inset-0 w-full h-full text-xl flex items-start justify-start p-6 font-bold flex-col z-20">
+                <p className="absolute inset-0 w-full h-full text-lg flex items-start justify-start p-6 font-bold flex-col z-20">
                   Years history
-                  <span className="md:text-11xl text-10xl py-14 md:py-20 font-semibold">
+                  <span className="md:text-9xl text-10xl  font-semibold">
                     11+
                   </span>
                   Countries in Operation
-                  <span className="text-6xl font-semibold">12+</span>
+                  <span className="text-5xl font-semibold">12+</span>
                   Employees worldwide
-                  <span className="text-6xl font-semibold">1000+</span>
+                  <span className="text-5xl font-semibold">1000+</span>
                 </p>
               </div>
             </div>
