@@ -91,7 +91,7 @@ const OurPresence = () => {
               <hr className="h-2 w-3/4 border-cs5 pb-1 mt-1 group-hover:border-cs2 " />
             </h3>
             <p>
-              With exports to over 17+ countries across 5 continents, we
+              With exports to over 11+ countries across 5 continents, we
               continue to strengthen our position as a trusted name in the
               industry.
             </p>
@@ -126,7 +126,7 @@ const OurPresence = () => {
             Network<span className="font-normal text-2xl mt-2">of Farmers</span>
           </div>
           <div className="rounded-full w-80 h-80 border-2 p-10 border-cs5 items-center justify-center flex flex-col text-7xl font-semibold text-center ">
-            <span className="font-normal text-2xl mb-2">Operating in</span>17+
+            <span className="font-normal text-2xl mb-2">Operating in</span>11+
             <span className="font-normal text-2xl mt-2">Countries</span>
           </div>
         </div>

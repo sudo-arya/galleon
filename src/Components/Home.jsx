@@ -11,9 +11,10 @@ const Home = () => {
       {/* Home */}
       <Seo title="Home - Galleon Trading" description="" keywords="" />
       <div className="h-fit bg-sky-600 bg-opacity-20 flex items-start justify-center flex-col pb-10 xl:p-20 p-14 w-full">
+
         <span className="x:text-8xl text-7xl text-cs5 font-bold -ml-6">
           {" "}
-          Our Produce
+          Excellence in Global Agricultural Trade
         </span>
         <div className="xl:flex-row flex-col flex items-start justify-start pt-6">
           <div className="h-fit w-fit text-3xl font-semibold px-6 py-4 animated-gradient rounded-2xl m-2 text-white">
@@ -125,7 +126,7 @@ const Home = () => {
         </div>
         <p className="my-10 ">
           We are a leading food and agri-business, supplying food ingredients,
-          feed and fibre to 22,000 customers worldwide, ranging from
+          feed and fibre to customers worldwide, ranging from
           multi-national organisations with world famous brands to small family
           run businesses.
         </p>

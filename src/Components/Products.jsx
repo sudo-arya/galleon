@@ -35,9 +35,9 @@ const Products = () => {
                     11+
                   </span>
                   Countries in Operation
-                  <span className="text-5xl font-semibold">12+</span>
-                  Employees worldwide
-                  <span className="text-5xl font-semibold">1000+</span>
+                  <span className="text-5xl font-semibold">11+</span>
+                  {/* Employees worldwide */}
+                  {/* <span className="text-5xl font-semibold">1000+</span> */}
                 </p>
               </div>
             </div>

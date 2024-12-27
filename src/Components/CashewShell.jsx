@@ -113,8 +113,9 @@ const CashewShell = () => {
             <p className="absolute inset-0 w-full h-full text-5xl md:text-6xl flex items-start justify-start p-6 font-bold flex-col text-white z-20">
               Raw Cashew Nuts
               <span className=" md:text-xl text-base py-1 md:py-8 font-semibold w-1/2">
-                Sourcing high-quality raw cashew nuts in shell from diverse
-                regions.{" "}
+                Sourcing high-quality raw cashew nuts.
+                 {/* in shell from diverse
+                regions.{" "} */}
               </span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
